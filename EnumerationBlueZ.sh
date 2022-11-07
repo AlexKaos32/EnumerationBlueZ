@@ -1,5 +1,5 @@
-  GNU nano 6.4                                                                                                     bt_addr.sh                                                                                                              
 #!/bin/bash
+
 
 hcitool scan >> scantest.txt
 
