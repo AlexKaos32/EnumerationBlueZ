@@ -24,7 +24,7 @@ fails=$(wc -l < failed.txt)
 if ((fails > 0)); then
         while read fail; do
                 hcitool info $fail >> hcinfo.txt
-                printf "\n Next addr\n\n" >> hcinfo .txt
+                printf "\n Next addr\n\n" >> hcinfo.txt
         done < failed.txt
 else
         printf "\nNo Failures!"
