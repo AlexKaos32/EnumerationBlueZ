@@ -2,11 +2,11 @@
 
 
 #Use hci ifs to run a scan, output to txt
-hcitool scan >> scantest.txt
+hcitool scan >> scan.txt
 
 
 #Pull all bt_addrs from previous text for further use
-grep : scantest.txt | awk '{print $1}' >> addrs.txt
+grep : scan.txt | awk '{print $1}' >> addrs.txt
 
 
 #Attempt to browse discovered devices
@@ -39,4 +39,4 @@ fi
 
 
 #zip extra txt files and remove them
-zip enum_archive scantest.txt addrs.txt failed.txt && rm -rf scantest.txt addrs.txt failed.txt
+zip enum_archive scan.txt addrs.txt failed.txt && rm -rf scan.txt addrs.txt failed.txt
